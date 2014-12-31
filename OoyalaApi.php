@@ -405,6 +405,7 @@ class OoyalaHttpRequest
         $method  = strtoupper($method);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_HEADER, true);
+        curl_setopt($ch, CURLOPT_DNS_CACHE_TIMEOUT, 0);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $method);
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION,
             $options['shouldFollowLocation']);
